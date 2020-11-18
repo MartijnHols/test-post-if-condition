@@ -1,0 +1,37 @@
+{
+    "name": "test-post-if-condition",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/index.js",
+    "scripts": {
+        "run": "npm run build && node lib/index.js",
+        "test": "jest --config jestconfig.json",
+        "build": "tsc && ncc build -o dist/main src/index.ts && ncc build -o dist/post src/post.ts",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "tslint -p tsconfig.json"
+    },
+    "keywords": [],
+    "author": "Dave Hadka",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dhadka/test-post-if-condition.git"
+    },
+    "bugs": {
+        "url": "https://github.com/dhadka/test-post-if-condition/issues"
+    },
+    "homepage": "https://github.com/dhadka/test-post-if-condition#readme",
+    "devDependencies": {
+        "@types/jest": "^26.0.15",
+        "@zeit/ncc": "^0.22.3",
+        "jest": "^26.6.3",
+        "prettier": "^2.1.2",
+        "ts-jest": "^26.4.4",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.0.5"
+    },
+    "dependencies": {
+        "@actions/core": "^1.2.6"
+    }
+}

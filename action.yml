@@ -1,0 +1,11 @@
+name: 'test-post-if-condition'
+description: ''
+inputs:
+  name:
+    description: 'Your name'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/main/index.js'
+  post: 'dist/post/index.js'
+  post-if: success() || (${{ inputs.always-save }} == 'true' && always())
