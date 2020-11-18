@@ -12,4 +12,4 @@ runs:
   using: 'node12'
   main: 'dist/main/index.js'
   post: 'dist/post/index.js'
-  post-if: success() || (always-save == 'true' && always())
+  post-if: success() || (inputs.always-save == 'true' && always())
