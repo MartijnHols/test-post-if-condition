@@ -4,6 +4,10 @@ inputs:
   name:
     description: 'Your name'
     required: true
+  always-save:
+    description: 'Set to true to always save'
+    required: true
+    default: false
 runs:
   using: 'node12'
   main: 'dist/main/index.js'

@@ -12,6 +12,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: ./
+      - name: Test passing
+        uses: ./
         with:
           name: OK
+      - name: Test passing with always save
+        uses: ./
+        with:
+          name: OK
+          always-save: true
+      - name: Test failure with always save
+        uses: ./
+        with:
+          name: fail
+          always-save: true
+
