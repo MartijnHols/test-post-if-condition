@@ -3,7 +3,7 @@ description: ''
 inputs:
   always-run-post:
     description: 'Always run the post step'
-    required: true
+    required: false
     default: false
 runs:
   using: 'node12'
