@@ -9,4 +9,4 @@ runs:
   using: 'node12'
   main: 'dist/main/index.js'
   post: 'dist/post/index.js'
-  post-if: success() || (with.always-run-post == 'true' && always()) || (with == 'true' && always()) || (with.ALWAYS_RUN_POST == 'true' && always()) || (with.INPUT_ALWAYS_RUN_POST == 'true' && always())
+  post-if: with.always-run-post == 'true' || with.ALWAYS_RUN_POST == 'true' || with.INPUT_ALWAYS_RUN_POST == 'true'
